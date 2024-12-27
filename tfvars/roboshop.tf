@@ -7,7 +7,6 @@ resource "aws_instance" "web" {
   }
 }
 
-
 resource "aws_route53_record" "www" {
   for_each = aws_instance.web
   zone_id = var.zone_id
